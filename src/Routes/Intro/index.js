@@ -28,6 +28,7 @@ const Intro = () => {
           </Title>
           <LoginFrame>
             <KakaoLoginBtn src={kakaoLogin} />
+            <SeeMore>서비스 살펴보기</SeeMore>
           </LoginFrame>
         </MainFrame>
       </Container>
@@ -73,13 +74,22 @@ const SubTitle = styled.div`
 
 const LoginFrame = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items:center;
   width: 100%;
 `;
 
 const KakaoLoginBtn = styled.img`
   width: 80%;
   height: 3rem;
+`;
+
+const SeeMore = styled.div`
+  color:white;
+  font-size:0.5rem;
+  text-decoration:underline;
+  margin-top:0.5rem;
 `;
 
 export default Intro;
