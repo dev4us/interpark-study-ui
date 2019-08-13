@@ -1,7 +1,12 @@
 import React from "react";
 import styled, {css} from "styled-components";
 
+import Carousel from 'nuka-carousel';
+
 import image1 from "../../Assets/Images/dt_image1.jpg";
+import image2 from "../../Assets/Images/dt_image2.jpg";
+import image3 from "../../Assets/Images/dt_image3.jpg";
+import image4 from "../../Assets/Images/dt_image4.jpg";
 
 const Card = () => {
   return (
@@ -11,10 +16,25 @@ const Card = () => {
           <DetailFrame>
             <Thumbnail thumbnail={image1}></Thumbnail>
             <InDetailFrame>
-              <Location>세부</Location>
-              <Date>2019-08-12</Date>
+              <Location>야생의 그 중심!</Location>
+              <Date>2019-08-12 / 마닐라 (필리핀)</Date>
             </InDetailFrame>
           </DetailFrame>
+          <PhotoFrame>
+            <Carousel
+              autoPlay={false}
+              width="100%"
+              initialSlideHeight={30}
+              heightMode="first"
+              withoutControls={true}
+            >
+              <Photo src={image2} alt=""/>
+              <Photo src={image2} alt=""/>
+              <Photo src={image3} alt=""/>
+              <Photo src={image4} alt=""/>
+            </Carousel>
+          </PhotoFrame>
+
         </CardFrame>
       </Container>
     </>
@@ -69,6 +89,18 @@ const Location = styled.div`
 const Date = styled.div`
   font-size:0.8rem;
   color:#5d5d5d;
+`;
+
+const PhotoFrame = styled.div`
+  display:block;
+  width:100%;
+  height:1rem;
+  margin-top:1.2rem;
+`;
+
+const Photo = styled.img`
+  width:100vw !important;
+  height:12rem;
 `;
 
 export default Card;

@@ -2,6 +2,7 @@
   "name": "interpark-study-ui",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/dev4us/interpark-study-ui",
   "dependencies": {
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-client": "^2.5.1",
@@ -12,9 +13,11 @@
     "apollo-link-ws": "^1.0.15",
     "apollo-utilities": "^1.2.1",
     "axios": "^0.18.0",
+    "gh-pages": "^2.1.1",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
     "moment": "^2.24.0",
+    "nuka-carousel": "^4.5.9",
     "react": "^16.8.4",
     "react-apollo": "^2.5.2",
     "react-apollo-hooks": "^0.4.3",
@@ -38,7 +41,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

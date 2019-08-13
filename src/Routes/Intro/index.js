@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router-dom";
 
 import BackgroundSlider from "react-background-slider";
 
@@ -12,7 +13,7 @@ import image6 from "../../Assets/Images/image6.jpg";
 
 import kakaoLogin from "../../Assets/Images/kakao_login.png";
 
-const Intro = () => {
+const Intro = ({history}) => {
   return (
     <>
       <Container>
@@ -27,7 +28,7 @@ const Intro = () => {
             <SubTitle>당신의 여행 앱</SubTitle>
           </Title>
           <LoginFrame>
-            <KakaoLoginBtn src={kakaoLogin} />
+            <KakaoLoginBtn src={kakaoLogin} onClick={() => history.push({pathname: "/main"})}/>
             <SeeMore>서비스 살펴보기</SeeMore>
           </LoginFrame>
         </MainFrame>
@@ -35,6 +36,8 @@ const Intro = () => {
     </>
   );
 };
+
+export default withRouter(Intro);
 
 const Container = styled.div`
   display: flex;
@@ -92,4 +95,3 @@ const SeeMore = styled.div`
   margin-top:0.5rem;
 `;
 
-export default Intro;
