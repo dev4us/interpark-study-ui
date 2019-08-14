@@ -2,7 +2,7 @@
   "name": "interpark-study-ui",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/dev4us/interpark-study-ui",
+  "homepage": "https://hardcore-minsky-6c8dc8.netlify.com",
   "dependencies": {
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-client": "^2.5.1",
