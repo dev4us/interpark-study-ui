@@ -4,14 +4,14 @@ import { withRouter } from "react-router-dom";
 
 import BackgroundSlider from "react-background-slider";
 
+import { MdAccountCircle, MdLock } from "react-icons/md";
+
 import image1 from "../../Assets/Images/image1.jpg";
 import image2 from "../../Assets/Images/image2.jpg";
 import image3 from "../../Assets/Images/image3.jpg";
 import image4 from "../../Assets/Images/image4.jpg";
 import image5 from "../../Assets/Images/image5.jpg";
 import image6 from "../../Assets/Images/image6.jpg";
-
-import kakaoLogin from "../../Assets/Images/kakao_login.png";
 
 const Intro = ({history}) => {
   return (
@@ -28,8 +28,21 @@ const Intro = ({history}) => {
             <SubTitle>당신의 여행 앱</SubTitle>
           </Title>
           <LoginFrame>
-            <KakaoLoginBtn src={kakaoLogin} onClick={() => history.push({pathname: "/main"})}/>
-            <SeeMore>서비스 살펴보기</SeeMore>
+            <InputFrame>
+              <UserIcon></UserIcon>
+              <InputTag type="text"></InputTag>
+            </InputFrame>
+            <InputFrame>
+              <PwIcon></PwIcon>
+              <InputTag type="password"></InputTag>
+            </InputFrame>
+            <ActiveBtn bgColor="#004988" onClick={() => history.push({pathname: "/main"})}>로그인</ActiveBtn>
+            <ActiveBtn bgColor="#0074da" onClick={() => history.push({pathname: "/main"})}>처음 왔어요</ActiveBtn>
+            <BottomFrame>
+              <SeeMore>내 계정 찾기</SeeMore>
+              <HrLine>|</HrLine>
+              <SeeMore>서비스 약관</SeeMore>
+            </BottomFrame>
           </LoginFrame>
         </MainFrame>
       </Container>
@@ -83,15 +96,65 @@ const LoginFrame = styled.div`
   width: 100%;
 `;
 
-const KakaoLoginBtn = styled.img`
+const InputFrame = styled.div`
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  width:80%;
+  /* background:#ffffff70; */
+  border-bottom:2px solid white;
+  margin-bottom:0.5rem;
+  /* border-radius:5px; */
+  padding-left:0.5rem;
+  padding-right:0.5rem;
+`;
+
+const InputTag = styled.input`
+  width:100%;
+  height:2.5rem;
+  /* color:#5d5d5d; */
+  color:white;
+  padding-left:1rem;
+  background:none;
+  border:none;
+`;
+
+const UserIcon = styled(MdAccountCircle)`
+  font-size:1.2rem;
+  color:white;
+`;
+
+const PwIcon = styled(MdLock)`
+  font-size:1.2rem;
+  color:white;
+`;
+
+const ActiveBtn = styled.button`
   width: 80%;
-  height: 3rem;
+  height: 2.2rem;
+  font-size:0.8rem;
+  color:white;
+  border-radius:5px;
+  background:${props => props.bgColor};
+  border:none;
+  margin-bottom:0.5rem;
+`;
+
+const BottomFrame = styled.div`
+  display:flex;
+  width:60%;
+  justify-content:space-between;
 `;
 
 const SeeMore = styled.div`
   color:white;
   font-size:0.5rem;
   text-decoration:underline;
-  margin-top:0.5rem;
+`;
+
+const HrLine = styled.div`
+  color:white;
+  height:100%;
+  font-size:0.5rem;
 `;
 

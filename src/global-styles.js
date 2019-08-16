@@ -23,10 +23,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration:none;
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
+    font-family: "Noto Sans KR", -apple-system, system-ui,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
   }
   input, textarea, select, button{
-    font-family: -apple-system,"Roboto",Arial,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    font-family: "Noto Sans KR", -apple-system, system-ui,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
   }
   input,
   button{
