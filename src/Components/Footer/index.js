@@ -1,15 +1,15 @@
 import React from "react";
 import styled, {css} from "styled-components";
 
-import { MdPeople, MdMap } from "react-icons/md";
-import { FaGlobe, FaPlusCircle } from "react-icons/fa";
+import { MdPeople, MdMap, MdTextsms } from "react-icons/md";
+import { FaPlusCircle } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
       <Container>
         <FooterFrame>
-          <FooterIcon active="active"><FaGlobe /></FooterIcon>
+          <FooterIcon active="active"><MdTextsms /></FooterIcon>
           <FooterIcon active=""><MdMap/></FooterIcon>
           <FooterIcon active=""><FaPlusCircle/></FooterIcon>
           <FooterIcon active=""><MdPeople/></FooterIcon>

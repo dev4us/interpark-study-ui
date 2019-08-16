@@ -72,7 +72,8 @@ const Card = ({avatar, title, date, location, contents, tags, likeCount, comment
             {tags}
           </TagFrame>
           <BottomBar>
-            <OpenComments>댓글 보기</OpenComments>
+            <InBottomBar>댓글보기</InBottomBar>            
+            <InBottomBar>알아보기</InBottomBar>
           </BottomBar>
         </CardFrame>
       </Container>
@@ -207,6 +208,9 @@ const TagFrame = styled.div`
 `;
 
 const BottomBar = styled.div`
+  display:flex;
+  flex-direction:row;
+  /* justify-content:flex-end; */
   border-top:1px solid #ececec;
   font-size:0.5rem;
   color:#5d5d5d;
@@ -216,8 +220,8 @@ const BottomBar = styled.div`
   padding-right:0.5rem;
 `;
 
-const OpenComments = styled.div`
-
+const InBottomBar = styled.div`
+  margin-right:0.5rem;
 `;
 
 
