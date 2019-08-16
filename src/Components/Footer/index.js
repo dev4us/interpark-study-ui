@@ -1,7 +1,7 @@
 import React from "react";
 import styled, {css} from "styled-components";
 
-import { MdPeople, MdTagFaces   } from "react-icons/md";
+import { MdPeople, MdMap } from "react-icons/md";
 import { FaGlobe, FaPlusCircle } from "react-icons/fa";
 
 const Footer = () => {
@@ -9,10 +9,10 @@ const Footer = () => {
     <>
       <Container>
         <FooterFrame>
-          <FooterIcon active="active"><MdPeople/></FooterIcon>
-          <FooterIcon active=""><MdTagFaces/></FooterIcon>
-          <FooterIcon active=""><FaGlobe/></FooterIcon>
+          <FooterIcon active="active"><FaGlobe /></FooterIcon>
+          <FooterIcon active=""><MdMap/></FooterIcon>
           <FooterIcon active=""><FaPlusCircle/></FooterIcon>
+          <FooterIcon active=""><MdPeople/></FooterIcon>
         </FooterFrame>
       </Container>
     </>
