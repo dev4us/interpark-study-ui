@@ -10,9 +10,7 @@ import image2 from "../../Assets/Images/image2.jpg";
 import image3 from "../../Assets/Images/image3.jpg";
 import image4 from "../../Assets/Images/image4.jpg";
 
-import avatar from "../../Assets/Images/avatar.jpg";
-
-const Card = ({title, date, location, contents, tags, likeCount, commentsCount}) => {
+const Card = ({avatar, title, date, location, contents, tags, likeCount, commentsCount}) => {
   const [isActiveHeart, handleHeart] = useState(false);
   const [isMarker, handleMarker] = useState(false);
 
@@ -146,32 +144,33 @@ const Photo = styled.img`
 const CommunityFrame = styled.div`
   display:flex;
   justify-content:space-between;
+  align-items:center;
   margin-top:0.5rem;
   padding-left:0.5rem;
   padding-right:0.5rem;
 `;
 
 const NullHeartIcon = styled(MdFavoriteBorder)`
-  font-size:1.2rem;
+  font-size:1.5rem;
   color:#ff3f3f;
   cursor:pointer;
 `;
 
 const FullHeartIcon = styled(MdFavorite)`
-  font-size:1.2rem;
+  font-size:1.5rem;
   color:#ff3f3f;
   cursor:pointer;
 `;
 
 const NullMarker = styled(MdBookmarkBorder)`
-  font-size:1.2rem;
+  font-size:1.5rem;
   color:#8bd45d;
   cursor:pointer;
   margin-left:0.3rem;
 `;
 
 const FullMarker = styled(MdBookmark)`
-  font-size:1.2rem;
+  font-size:1.5rem;
   color:#8bd45d;
   cursor:pointer;
   margin-left:0.3rem;

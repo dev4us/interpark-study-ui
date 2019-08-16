@@ -6,6 +6,10 @@ import { MdSearch } from "react-icons/md";
 import Footer from "../../Components/Footer";
 import Card from "../../Components/Card";
 
+import avatar from "../../Assets/Images/avatar.jpg";
+import avatar2 from "../../Assets/Images/avatar2.jpg";
+import avatar3 from "../../Assets/Images/avatar3.png";
+
 import image1 from "../../Assets/Images/dt_image1.jpg";
 import image2 from "../../Assets/Images/dt_image2.jpg";
 import image3 from "../../Assets/Images/dt_image3.jpg";
@@ -69,6 +73,7 @@ const Main = () => {
         <HotterReviewFrame>
           <HotterReviewTitle>최근 핫한 리뷰</HotterReviewTitle>
           <Card 
+            avatar={avatar3}
             title="야생의 그 중심!"
             date="2019-08-14"
             location="마닐라 (필리핀)"
@@ -78,6 +83,7 @@ const Main = () => {
             commentsCount="155"
           ></Card>
           <Card 
+            avatar={avatar2}
             title="7달라 여행 다녀옴!"
             date="2019-08-12"
             location="베네수엘라 (남아메리카)"
@@ -87,6 +93,7 @@ const Main = () => {
             commentsCount="201"
           ></Card>
           <Card 
+            avatar={avatar}
             title="마치 보석같은 바다!"
             date="2019-06-02"
             location="세부"
