@@ -36,11 +36,10 @@ const Intro = ({history}) => {
               <PwIcon></PwIcon>
               <InputTag type="password"></InputTag>
             </InputFrame>
-            <ActiveBtn bgColor="#004988" onClick={() => history.push({pathname: "/main"})}>로그인</ActiveBtn>
-            <ActiveBtn bgColor="#0074da" onClick={() => history.push({pathname: "/main"})}>처음 왔어요</ActiveBtn>
+            <ActiveBtn bgColor="#31a0ff" onClick={() => history.push({pathname: "/main"})}>로그인</ActiveBtn>
+            <ActiveBtn bgColor="#0074da" onClick={() => history.push({pathname: "/main"})}>회원가입</ActiveBtn>
             <BottomFrame>
               <SeeMore>내 계정 찾기</SeeMore>
-              <HrLine>|</HrLine>
               <SeeMore>서비스 약관</SeeMore>
             </BottomFrame>
           </LoginFrame>
@@ -65,7 +64,7 @@ const MainFrame = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 80%;
-  height: 80%;
+  height: 70%;
 `;
 
 const Title = styled.div`
@@ -131,7 +130,7 @@ const PwIcon = styled(MdLock)`
 
 const ActiveBtn = styled.button`
   width: 80%;
-  height: 2.2rem;
+  height: 2.5rem;
   font-size:0.8rem;
   color:white;
   border-radius:5px;
@@ -142,19 +141,21 @@ const ActiveBtn = styled.button`
 
 const BottomFrame = styled.div`
   display:flex;
-  width:60%;
   justify-content:space-between;
+  width:80%;
+  padding-top:0.6rem;
+  border-top:1px solid white;
 `;
 
 const SeeMore = styled.div`
   color:white;
-  font-size:0.5rem;
-  text-decoration:underline;
+  font-size:0.7rem;
+  text-align:center;
+  width:50%;
+
+  :first-child{
+    border-right:1px solid white;
+  }
 `;
 
-const HrLine = styled.div`
-  color:white;
-  height:100%;
-  font-size:0.5rem;
-`;
 
