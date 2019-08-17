@@ -1,6 +1,6 @@
 import React from "react";
 import styled, {css} from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import { MdPeople, MdMap, MdTextsms } from "react-icons/md";
 import { FaPlusCircle } from "react-icons/fa";
@@ -23,7 +23,7 @@ const Footer = ({location}) => {
     </>
   );
 }
-export default Footer;
+export default withRouter(Footer);
 
 const Container = styled.div`
   position:sticky;

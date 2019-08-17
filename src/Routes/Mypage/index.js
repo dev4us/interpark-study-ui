@@ -7,15 +7,19 @@ const MyPage = ({location}) => {
   return (
     <>
       <Container>
-        개발 예정 ^0- 찡긋!
+        <Null>개발 예정 ^0- 찡긋!</Null>
+        <Footer/>
       </Container>
-      <Footer location={location}/>
     </>
   );
 };
 
 const Container = styled.div`
   width:100%;
+  height:100%;
+`;
+
+const Null = styled.div`
   height:100%;
 `;
 
