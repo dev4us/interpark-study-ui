@@ -30,8 +30,8 @@ const Board = styled.div`
   background:white;
 
   @media only screen and (max-width: 785px){
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:100%;
   }
 `;
 
