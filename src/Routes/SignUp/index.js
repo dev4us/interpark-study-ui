@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import styled, {css} from "styled-components";
+import { withRouter } from "react-router-dom";
 
 import { GoPlusSmall } from "react-icons/go";
 import { IoMdPerson } from "react-icons/io";
@@ -8,7 +9,7 @@ import LineHeader from "../../Components/LineHeader";
 
 import avatar from "../../Assets/Images/avatar.jpg";
 
-const SignUp = () => {
+const SignUp = ({history}) => {
   const [isUpload, handleUpload] = useState(false);
   return (
     <>
@@ -17,27 +18,48 @@ const SignUp = () => {
         <TitleFrame>
           <MainTitle>Hello!</MainTitle>
           <SubTitle>회원가입 후 다양한 여행 정보를 즐겨볼까요?</SubTitle>
-          <SignUpFrame>
-            <ProfileImage uploaded={isUpload} onClick={() => handleUpload(!isUpload)}>
-              <ThumbnailFrame uploadImage={isUpload ? avatar : ''}>
-                {
-                  isUpload === false && (
-                    <NoThumbnail />
-                  )
-                }
-              </ThumbnailFrame>
-              {
-                  isUpload === false && (
-                    <PlusIcon><GoPlusSmall /></PlusIcon>
-                  )
-                }              
-            </ProfileImage>
-          </SignUpFrame>
         </TitleFrame>
+        <SignUpFrame>
+          <ProfileImage uploaded={isUpload} onClick={() => handleUpload(!isUpload)}>
+            <ThumbnailFrame uploadImage={isUpload ? avatar : ''}>
+              {
+                isUpload === false && (
+                  <NoThumbnail />
+                )
+              }
+            </ThumbnailFrame>
+            {
+                isUpload === false && (
+                  <PlusIcon><GoPlusSmall /></PlusIcon>
+                )
+              }              
+          </ProfileImage>
+          <InputName>이메일</InputName>
+          <InputFrame>
+              <InputTag type="text"></InputTag>
+          </InputFrame>
+          <InputName>닉네임</InputName>
+          <InputFrame>
+              <InputTag type="text"></InputTag>
+          </InputFrame>          
+          <InputName>비밀번호</InputName>
+          <InputFrame>
+              <InputTag type="password"></InputTag>
+          </InputFrame>
+          <InputName>비밀번호 확인</InputName>
+          <InputFrame>
+              <InputTag type="password"></InputTag>
+          </InputFrame>          
+        </SignUpFrame>
+        <ConfirmFrame>
+          <ConfirmBtn onClick={() => history.push({pathname: "/main"})}>회원가입</ConfirmBtn>
+        </ConfirmFrame>
       </Container>
     </>
   );
 };
+
+export default withRouter(SignUp);
 
 const Container = styled.div`
   width:100%;
@@ -63,6 +85,8 @@ const SubTitle = styled.div`
 
 const SignUpFrame = styled.div`
   margin-top:2rem;
+  padding-left:1.6rem;
+  padding-right:1.6rem;
 `;
 
 const ProfileImage = styled.div`
@@ -71,6 +95,7 @@ const ProfileImage = styled.div`
   height:3rem;
   background:#dcdcdc;
   border-radius:100px;
+  margin-bottom:1.4rem;
 `;
 
 const ThumbnailFrame = styled.div`
@@ -111,4 +136,40 @@ const NoThumbnail = styled(IoMdPerson)`
   color:#676767;
 `;
 
-export default SignUp;
+const InputName = styled.div`
+  font-size:0.9rem;
+  font-weight:medium;
+  margin-bottom:0.3rem;
+`;
+
+const InputFrame = styled.div`
+  display:flex;
+  margin-bottom:2rem;
+`;
+
+const InputTag = styled.input`
+  width:100%;
+  padding:0.5rem;
+  border:unset;
+  border-bottom:1px solid #a5a5a5;
+
+  :focus{
+    padding-bottom:0.43rem;
+    border-bottom:0.15rem solid #0978fe;
+  }
+`;
+
+const ConfirmFrame = styled.div`
+  width:100%;
+  padding-left:1.6rem;
+  padding-right:1.6rem;
+`;
+const ConfirmBtn = styled.button`
+  width:100%;
+  height:3rem;
+  font-size:1.1rem;
+  letter-spacing:0.3rem;
+  color:white;
+  background: #0978fe;
+  border:unset;
+`;
