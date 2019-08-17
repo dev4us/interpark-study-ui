@@ -35,7 +35,7 @@ const Intro = ({history}) => {
               <InputTag type="password"></InputTag>
             </InputFrame>
             <ActiveBtn bgColor="#0074da" onClick={() => history.push({pathname: "/main"})}>로그인</ActiveBtn>
-            <ActiveBtn bgColor="#31a0ff" onClick={() => history.push({pathname: "/main"})}>회원가입</ActiveBtn>
+            <ActiveBtn bgColor="#31a0ff" onClick={() => history.push({pathname: "/signup"})}>회원가입</ActiveBtn>
             <BottomFrame>
               <SeeMore>내 계정 찾기</SeeMore>
               <SeeMore>서비스 약관</SeeMore>

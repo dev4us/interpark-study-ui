@@ -218,7 +218,6 @@ const RecentlyPhotoReviewSub = styled.div`
 
 const HotterReviewFrame = styled.div`
   margin-top:2rem;
-  padding-bottom:3rem;
 `;
 
 const HotterReviewTitle = styled.div`

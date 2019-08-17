@@ -6,12 +6,14 @@ import ResponsiveBox from "../Components/ResponsiveBox";
 import { Store } from "../GlobalState/store";
 
 import Intro from "./Intro";
+import SignUp from "./SignUp";
 import Main from "./Main";
 
 const LoggedOutRoutes = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Intro} />
+      <Route path="/signup" exact component={SignUp} />
       <Route path="/main" exact component={Main} />
       <Redirect from={"*"} to={"/"} />
     </Switch>
@@ -22,6 +24,7 @@ const LoggedInRoutes = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Intro} />
+      <Route path="/signup" exact component={Intro} />
       <Redirect from={"*"} to={"/"} />
     </Switch>
   </BrowserRouter>

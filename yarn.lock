@@ -7264,6 +7264,11 @@ nan@^2.9.2:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.1.tgz#90e22bccb8ca57ea4cd37cc83d3819b52eea6766"
   integrity sha512-iji6k87OSXa0CcrLl9z+ZiYSuR2o+c0bGuNmXdrhTQTakxytAFsC56SArGYoiHlJlFoHSnvmhpceZJaXkVuOtA==
 
+nanobar@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/nanobar/-/nanobar-0.4.2.tgz#01c512e6c662e38562694f64e4a88a253732f48f"
+  integrity sha1-AcUS5sZi44ViaU9k5KiKJTcy9I8=
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -9177,6 +9182,13 @@ react-move@^5.0.0:
     kapellmeister "^3.0.1"
     prop-types "^15.7.2"
     react-lifecycles-compat "^3.0.4"
+
+react-nanobar@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-nanobar/-/react-nanobar-1.0.0.tgz#1156ea13a60a333e3bf3316c1cb0c013e3c4ff0f"
+  integrity sha1-EVbqE6YKMz478zFsHLDAE+PE/w8=
+  dependencies:
+    nanobar "^0.4.2"
 
 react-resize-detector@^2.3.0:
   version "2.3.0"
