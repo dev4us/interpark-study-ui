@@ -160,19 +160,19 @@ const SeeMore = styled.div`
 
 const bgSlider  = keyframes`
    0% {
-    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image1.jpg?raw=true');
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/bgSlider1.jpg?raw=true');
    }
    25% {
-    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image2.jpg?raw=true');
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/bgSlider5.jpg?raw=true');
    }
    50% {
-    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image3.jpg?raw=true');
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/bgSlider2.jpg?raw=true');
    }
    75% {
-    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image4.jpg?raw=true');
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/bgSlider3.jpg?raw=true');
    }
    100% {
-    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image5.jpg?raw=true');
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/bgSlider4.jpg?raw=true');
    }
 `;
 
@@ -182,8 +182,7 @@ const BackgroundSlider = styled.div`
   width:100%;
   height:100%;
   background-size:cover;
-  animation: ${bgSlider} 20s infinite linear;
-  background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image1.jpg?raw=true');
+  animation: ${bgSlider} 10s infinite linear;
 `;
 
 
