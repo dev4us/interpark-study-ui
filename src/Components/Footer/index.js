@@ -8,24 +8,30 @@ const Footer = () => {
   return (
     <>
       <Container>
-        <FooterFrame>
-          <FooterIcon active="active"><MdTextsms /></FooterIcon>
-          <FooterIcon active=""><MdMap/></FooterIcon>
-          <FooterIcon active=""><FaPlusCircle/></FooterIcon>
-          <FooterIcon active=""><MdPeople/></FooterIcon>
-        </FooterFrame>
-      </Container>
+        <StickyBar>
+          <FooterFrame>
+            <FooterIcon active="active"><MdTextsms /></FooterIcon>
+            <FooterIcon active=""><MdMap/></FooterIcon>
+            <FooterIcon active=""><FaPlusCircle/></FooterIcon>
+            <FooterIcon active=""><MdPeople/></FooterIcon>
+          </FooterFrame>
+         </StickyBar>
+      </Container> 
     </>
   );
 }
 
 const Container = styled.div`
-  position:fixed;
+  position:sticky;
   width:100%;
   bottom:0;
+  z-index:9999;
+`;
+
+const StickyBar = styled.div`
+  width:100%;
   height:3rem;
   background:white;
-  z-index:9999;
 `;
 
 const FooterFrame = styled.div`

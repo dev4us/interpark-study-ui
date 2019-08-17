@@ -181,8 +181,8 @@ const BackgroundSlider = styled.div`
   z-index:0;
   width:100%;
   height:100%;
-  background-size:cover;
-  animation: ${bgSlider} 10s infinite linear;
+  background-size:100% 100%;
+  animation: ${bgSlider} 15s infinite linear;
 `;
 
 

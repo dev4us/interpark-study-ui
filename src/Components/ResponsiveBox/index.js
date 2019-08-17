@@ -21,7 +21,7 @@ const Container = styled.div`
   height:100%;
   justify-content:center;
   align-items:center;
-  background:#f1f1f1;
+  background:#94ea93;
 `;
 
 const Board = styled.div`
