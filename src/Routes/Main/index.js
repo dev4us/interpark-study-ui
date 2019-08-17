@@ -16,7 +16,7 @@ import image3 from "../../Assets/Images/dt_image3.jpg";
 import image4 from "../../Assets/Images/dt_image4.jpg";
 import image5 from "../../Assets/Images/dt_image5.jpg";
 
-const Main = () => {
+const Main = ({location}) => {
   const [searchText, handleSearchText] = useState("");
 
   return (
@@ -105,11 +105,13 @@ const Main = () => {
             ></Card>
           </HotterReviewFrame>
         </MainFrame>
-        <Footer/>
+        <Footer location={location}/>
       </Container>
     </>
   );
 };
+
+export default Main;
 
 const Container = styled.div`
   position:relative;
@@ -225,5 +227,3 @@ const HotterReviewTitle = styled.div`
   font-weight:bold;
   margin-bottom:2rem;
 `;
-
-export default Main;

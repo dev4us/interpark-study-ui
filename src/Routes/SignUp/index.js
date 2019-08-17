@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import styled, {css} from "styled-components";
-import { withRouter } from "react-router-dom";
 
 import { GoPlusSmall } from "react-icons/go";
 import { IoMdPerson } from "react-icons/io";
@@ -59,7 +58,7 @@ const SignUp = ({history}) => {
   );
 };
 
-export default withRouter(SignUp);
+export default SignUp;
 
 const Container = styled.div`
   width:100%;
