@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { withRouter } from "react-router-dom";
 
-import BackgroundSlider from "react-background-slider";
+// import BackgroundSlider from "react-background-slider";
 
 import { MdAccountCircle, MdLock } from "react-icons/md";
 
@@ -19,8 +19,6 @@ const Intro = ({history}) => {
       <Container>
         <BackgroundSlider
           images={[image1, image2, image3, image4, image5, image6]}
-          duration={5}
-          transition={2}
         />
         <MainFrame>
           <Title>
@@ -53,6 +51,7 @@ export default withRouter(Intro);
 
 const Container = styled.div`
   display: flex;
+  position:relative;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -65,6 +64,7 @@ const MainFrame = styled.div`
   justify-content: space-between;
   width: 80%;
   height: 70%;
+  z-index:1;
 `;
 
 const Title = styled.div`
@@ -157,5 +157,35 @@ const SeeMore = styled.div`
     border-right:1px solid white;
   }
 `;
+
+const bgSlider  = keyframes`
+   0% {
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image1.jpg?raw=true');
+   }
+   25% {
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image2.jpg?raw=true');
+   }
+   50% {
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image3.jpg?raw=true');
+   }
+   75% {
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image4.jpg?raw=true');
+   }
+   100% {
+    background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image5.jpg?raw=true');
+   }
+`;
+
+const BackgroundSlider = styled.div`
+  position:absolute;
+  z-index:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  animation: ${bgSlider} 20s infinite linear;
+  background-image:url('//github.com/dev4us/interpark-study-ui/blob/master/src/Assets/Images/image1.jpg?raw=true');
+`;
+
+
 
 

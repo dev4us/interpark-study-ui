@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
+import ResponsiveBox from "../Components/ResponsiveBox";
+
 import { Store } from "../GlobalState/store";
 
 import Intro from "./Intro";
@@ -28,11 +30,7 @@ const LoggedInRoutes = () => (
 const Routes = () => {
   const { state } = useContext(Store);
 
-  if (state.isLoggedIn) {
-    return <LoggedInRoutes />;
-  } else {
-    return <LoggedOutRoutes />;
-  }
+  return <ResponsiveBox contents={state.isLoggedIn ? <LoggedInRoutes /> : <LoggedOutRoutes />} />;
 };
 
 export default Routes;
